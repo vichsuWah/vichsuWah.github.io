@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Introduction Git - A rookie engineer&#39;s WebSite</title><meta name="Description" content="An introduction to Git"><meta property="og:title" content="Introduction Git" />
+<meta property="og:description" content="An introduction to Git" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://vichsuWah.github.io/git_intro/" /><meta property="og:image" content="https://vichsuWah.github.io/yawn.gif"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-08-01T00:09:40+08:00" />
+<meta property="article:modified_time" content="2021-08-01T02:27:20+08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://vichsuWah.github.io/yawn.gif"/>
+
+<meta name="twitter:title" content="Introduction Git"/>
+<meta name="twitter:description" content="An introduction to Git"/>
+<meta name="application-name" content="Vic Hsu">
+<meta name="apple-mobile-web-app-title" content="Vic Hsu"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://vichsuWah.github.io/git_intro/" /><link rel="next" href="https://vichsuWah.github.io/git_command/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Introduction Git",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/vichsuWah.github.io\/git_intro\/"
+        },"genre": "posts","keywords": "git, tool","wordcount":  1049 ,
+        "url": "https:\/\/vichsuWah.github.io\/git_intro\/","datePublished": "2021-08-01T00:09:40+08:00","dateModified": "2021-08-01T02:27:20+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Vic"
+            },"description": "An introduction to Git"
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="A rookie engineer&#39;s WebSite"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/yawn_transparent.gif"
+        data-srcset="/images/yawn_transparent.gif, /images/yawn_transparent.gif 1.5x, /images/yawn_transparent.gif 2x"
+        data-sizes="auto"
+        alt="/images/yawn_transparent.gif"
+        title="/images/yawn_transparent.gif" />Vic Hsu</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/cv/cv.pdf"> CV </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="https://github.com/vichsuWah" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="A rookie engineer&#39;s WebSite"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/yawn_transparent.gif"
+        data-srcset="/images/yawn_transparent.gif, /images/yawn_transparent.gif 1.5x, /images/yawn_transparent.gif 2x"
+        data-sizes="auto"
+        alt="/images/yawn_transparent.gif"
+        title="/images/yawn_transparent.gif" />Vic Hsu</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/cv/cv.pdf" title="">CV</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="https://github.com/vichsuWah" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Introduction Git</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Vic</a></span>&nbsp;<span class="post-category">included in <a href="/categories/git/"><i class="far fa-folder fa-fw"></i>Git</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-08-01">2021-08-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1049 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#0-before-start">0. Before start</a></li>
+    <li><a href="#1-installation">1. Installation</a>
+      <ul>
+        <li><a href="#windows">Windows</a></li>
+        <li><a href="#linux-ubuntu">Linux (Ubuntu)</a></li>
+      </ul>
+    </li>
+    <li><a href="#settings">Settings</a>
+      <ul>
+        <li><a href="#help">Help</a></li>
+      </ul>
+    </li>
+    <li><a href="#basics">Basics</a>
+      <ul>
+        <li><a href="#the-lifecycle-of-the-status-of-your-files">The lifecycle of the status of your files</a></li>
+        <li><a href="#initializing-a-repository-in-an-existing-directory">Initializing a Repository in an Existing Directory</a></li>
+      </ul>
+    </li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>Note<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">A <em><strong>software system</strong></em> that records changes to a file or set of files over time so that you can recall specific versions later.<br>
+Git can track the changes you make to files, so you have a record of what has been done, and you can revert to specific versions should you ever need to.</div>
+        </div>
+    </div>
+<p> </p>
+<h2 id="0-before-start">0. Before start</h2>
+<p>Github, Gitlab ?</p>
+<p><em><strong>Cloud services</strong></em> for remote hosting of git repositories. In addition to hosting your code, the site helps manage software development projects with features like issue tracking, collaborating with other GitHub users, and hosting web pages.</p>
+<hr>
+<hr>
+<hr>
+<h2 id="1-installation">1. Installation</h2>
+<ul>
+<li>Official website : <a href="https://git-scm.com/" target="_blank" rel="noopener noreffer">https://git-scm.com/</a></li>
+</ul>
+<h3 id="windows">Windows</h3>
+<ol>
+<li>Go to the offical website and download the .exe installation file for windows.\</li>
+</ol>
+<center>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://i.imgur.com/9jNhnyK.png=500x"
+        data-srcset="https://i.imgur.com/9jNhnyK.png=500x, https://i.imgur.com/9jNhnyK.png=500x 1.5x, https://i.imgur.com/9jNhnyK.png=500x 2x"
+        data-sizes="auto"
+        alt="https://i.imgur.com/9jNhnyK.png=500x"
+        title="https://i.imgur.com/9jNhnyK.png=500x" /></p>
+</center>
+<ol start="2">
+<li>Using scoop (Windows command line package management tool)</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">scoop install git
+</code></pre></td></tr></table>
+</div>
+</div><p> </p>
+<h3 id="linux-ubuntu">Linux (Ubuntu)</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># (recommend) only includes main components with minimal dependencies</span>
+sudo apt-get install git 
+
+<span class="c1"># contains all sub-packages</span>
+sudo apt-get install git-all 
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<hr>
+<hr>
+<h2 id="settings">Settings</h2>
+<p>The first thing you should do when you install Git is to set your user name and email address. This is important because every Git commit uses this information.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git config --global user.name <span class="s2">&#34;Username&#34;</span>
+git config --global user.email Username@example.com
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>若你有傳遞<code>--global</code>參數，只需要做這工作一次，此後在你安裝使用的系統上，不論 Git 做任何事都會採用此資訊。 若你想指定不同的名字或電子郵件給特定的專案，只需要在該專案目錄內執行此命令，並確定未加上<code>--global</code>參數。</p>
+</blockquote>
+<p>Check settings</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git config --list
+
+<span class="o">[</span>output<span class="o">]</span>
+user.name<span class="o">=</span>vic
+user.email<span class="o">=</span>vic@example.com
+color.status<span class="o">=</span>auto
+color.branch<span class="o">=</span>auto
+color.interactive<span class="o">=</span>auto
+color.diff<span class="o">=</span>auto
+...
+<span class="o">[</span>end output<span class="o">]</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># or maybe use: git config &lt;key&gt;</span>
+git config --global user.name
+vic
+
+git config --global user.email
+vic@example.com
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>Git的設定會被記錄在gitconfig檔案中，這些參數被存放在下列三個地方</p>
+<blockquote>
+<ol>
+<li>檔案 <code>/etc/gitconfig</code>：裡面包含該系統所有使用者和使用者倉儲的預設設定。 如果你傳遞<code>--system</code>參數給<code>git config</code>，它就會明確地從這個檔案讀取或寫入設定。</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>檔案 <code>~/.gitconfig</code>、<code>~/.config/git/config</code>：你的帳號專用的設定。只要你傳遞<code> --global</code>，就會明確地讓 Git 從這個檔案讀取或寫入設定</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>任何倉儲中 Git 資料夾的 config 檔案（位於 <code>.git/config</code>）：這個倉儲的專用設定。</li>
+</ol>
+</blockquote>
+<p>每個層級的設定皆覆蓋先前的設定，所以在<code>.git/config </code>的設定優先權高於在 <code>/etc/gitconfig</code>裡的設定。</p>
+<ul>
+<li>在 Windows 系統，Git 會在<code>$HOME</code>目錄（對大部份使用者來說是 <code>C:\Users\$USER</code>）內尋找<code>.gitconfig</code></li>
+</ul>
+</blockquote>
+<p> </p>
+<h3 id="help">Help</h3>
+<p>If you ever need help while using Git, there are three equivalent ways to get the comprehensive manual page (manpage) help for any of the Git commands:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git <span class="nb">help</span> &lt;verb&gt;
+git &lt;verb&gt; --help
+man git-&lt;verb&gt;
+
+<span class="c1"># ex.</span>
+git <span class="nb">help</span> config
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<hr>
+<hr>
+<h2 id="basics">Basics</h2>
+<h3 id="the-lifecycle-of-the-status-of-your-files">The lifecycle of the status of your files</h3>
+<p>Remember that each file in your working directory can be in one of two states: <strong>tracked</strong> or <strong>untracked</strong>. Tracked files are files that were in the last snapshot, as well as any newly staged files; they can be unmodified, modified, or staged. In short, <strong>tracked files are files that Git knows about</strong>.</p>
+<p>Untracked files are everything else — any files in your working directory that were not in your last snapshot and are not in your staging area. When you first clone a repository, all of your files will be tracked and unmodified because Git just checked them out and you haven’t edited anything.</p>
+<p>As you edit files, Git sees them as modified, because you’ve changed them since your last commit. As you work, you selectively stage these modified files and then commit all those staged changes, and the cycle repeats.</p>
+<p> </p>
+<center>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://i.imgur.com/lnpqvXX.png=2000x"
+        data-srcset="https://i.imgur.com/lnpqvXX.png=2000x, https://i.imgur.com/lnpqvXX.png=2000x 1.5x, https://i.imgur.com/lnpqvXX.png=2000x 2x"
+        data-sizes="auto"
+        alt="https://i.imgur.com/lnpqvXX.png=2000x"
+        title="https://i.imgur.com/lnpqvXX.png=2000x" /></p>
+</center>
+<p> </p>
+<h3 id="initializing-a-repository-in-an-existing-directory">Initializing a Repository in an Existing Directory</h3>
+<blockquote>
+<p>you can using the <code>git status</code> command to determine which files are in which state</p>
+</blockquote>
+<ol>
+<li>
+<p>If you have a project directory that is currently not under version control and you want to start controlling it with Git, you first need to go to that project’s directory and type:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git init
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>This creates a new subdirectory named <code>.git</code> that contains all of your necessary repository files</p>
+</blockquote>
+</li>
+<li>
+<p>You can accomplish that with a few <code>git add</code>commands that specify the files you want to track, followed by a <code>git commit</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git add -A             <span class="c1"># track all files inside the folder</span>
+git commit -m <span class="s2">&#34;msg&#34;</span>    <span class="c1"># save a checkpoint with a message &#34;msg&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<hr>
+<hr>
+<hr>
+<h2 id="reference">Reference</h2>
+<p><a href="https://git-scm.com/doc" target="_blank" rel="noopener noreffer">https://git-scm.com/doc</a></p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-08-01&nbsp;<a class="git-hash" href="https://github.com/vichsuWah/commit/4f75df35d00a4e07f07391f3d2440fb81e75a8a3" target="_blank" title="commit by vic(vich.4y4gj4@gmail.com) 4f75df35d00a4e07f07391f3d2440fb81e75a8a3: site backup 08/01/2021 02:27">
+                                    <i class="fas fa-hashtag fa-fw"></i>4f75df3</a></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/git_intro/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://vichsuWah.github.io/git_intro/" data-title="Introduction Git" data-hashtags="git,tool"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://vichsuWah.github.io/git_intro/" data-hashtag="git"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Evernote" data-sharer="evernote" data-url="https://vichsuWah.github.io/git_intro/" data-title="Introduction Git"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/git/">git</a>,&nbsp;<a href="/tags/tool/">tool</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/git_command/" class="next" rel="next" title="Git Commands">Git Commands<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.86.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Vic</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript" src="https://https-vichsuwah-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"Q980VYTCFN","algoliaIndex":"vic-github-website","algoliaSearchKey":"5bfba1983c429e5d64233e83d5bc3ee2","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

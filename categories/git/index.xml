@@ -1,0 +1,21 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Git - Category - A rookie engineer&#39;s WebSite</title>
+        <link>https://vichsuWah.github.io/categories/git/</link>
+        <description>Git - Category - A rookie engineer&#39;s WebSite</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 01 Aug 2021 00:09:40 &#43;0800</lastBuildDate><atom:link href="https://vichsuWah.github.io/categories/git/" rel="self" type="application/rss+xml" /><item>
+    <title>Git Commands</title>
+    <link>https://vichsuWah.github.io/git_command/</link>
+    <pubDate>Sun, 01 Aug 2021 00:09:40 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://vichsuWah.github.io/git_command/</guid>
+    <description><![CDATA[Common Git Commands 使用說明]]></description>
+</item><item>
+    <title>Introduction Git</title>
+    <link>https://vichsuWah.github.io/git_intro/</link>
+    <pubDate>Sun, 01 Aug 2021 00:09:40 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://vichsuWah.github.io/git_intro/</guid>
+    <description><![CDATA[An introduction to Git]]></description>
+</item></channel>
+</rss>
